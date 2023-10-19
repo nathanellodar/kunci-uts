@@ -53,7 +53,7 @@ class STACK:
             print('Penumpang Kosong')
         else:
             pembantu = self._head
-            while pembantu != none:
+            while pembantu != None:
                 print(pembantu._data, end=" ")
                 pembantu = pembantu._next
                 print()
