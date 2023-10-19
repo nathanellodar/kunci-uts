@@ -1,4 +1,4 @@
-## ini
+## iniii
 
 class Node:
     def __init__(self, data):
@@ -85,5 +85,4 @@ if __name__ == '__main__':
                     while berat_total_sekarang > 1000:
                         pass
         elif pilihan == 2:
-            orang = STACK()
             orang.printAll()
