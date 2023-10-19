@@ -1,4 +1,6 @@
-## bentar yaw
+## coba perbaiki ini dan ubah-ubah dikit
+
+
 class Node:
     def __init__(self, data):
         self._data = data
@@ -12,14 +14,14 @@ class Penumpang:
         self._berat = berat
     def getNamaBerat(self):
         return ({'nama' : self._nama, 'berat' : self._berat})
-class SATACK:
+class STACK:
     def __init__(self):
         self._head = None
         self._tail = None
         self._size = 0
     def __len__(self):
         return self._size
-    def tambahPenumpang(self, nama, berat):
+    def push(self, nama, berat):
         data_baru = Penumpang()
         data_baru.setNama(nama)
         data_baru.setBerat(berat)
@@ -71,12 +73,12 @@ if __name__ == '__main__':
             break
         elif pilihan == 1:
             nama = input('Masukkan nama :')
-            berat = int(input('Masukkan nama :'))
-            orang = Penumpang()
+            berat = int(input('Masukkan berat :'))
+            orang = STACK()
             if total_terisi < 1000:
                 total_terisi += berat
                 if total_terisi < 1000:
-                    orang.tambahPenumpang(nama, berat)
+                    orang.push(nama, berat)
                     data = {'nama' : nama, 'berat' : berat}
                     daftar_isi.append(data)
                 else:
@@ -84,5 +86,5 @@ if __name__ == '__main__':
                     while berat_total_sekarang > 1000:
                         pass
         elif pilihan == 2:
-            orang = Penumpang()
+            orang = STACK()
             orang.printAll()
