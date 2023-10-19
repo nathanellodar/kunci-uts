@@ -1,5 +1,4 @@
-## coba perbaiki ini dan ubah-ubah dikit
-
+## ini
 
 class Node:
     def __init__(self, data):
@@ -34,7 +33,7 @@ class STACK:
             self._head = data_baru
         self._size += 1
         print(f'Data {nama} ({berat} kg) tersimpan')
-    def hapusPenumpang(self):
+    def pop(self):
         if self.__len__() == 0:
             print('belum ada penumpang')
         else:
@@ -63,6 +62,7 @@ class STACK:
 if __name__ == '__main__':
     total_terisi = 0
     daftar_isi = []
+    orang = STACK()
     while True:
         print('Pilih Menu')
         print('1. Tambah Penumpang')
@@ -74,7 +74,6 @@ if __name__ == '__main__':
         elif pilihan == 1:
             nama = input('Masukkan nama :')
             berat = int(input('Masukkan berat :'))
-            orang = STACK()
             if total_terisi < 1000:
                 total_terisi += berat
                 if total_terisi < 1000:
